@@ -79,14 +79,6 @@
             margin: 0 auto;
         }
 
-        .note {
-            background: var(--hover-bg);
-            border-left: 4px solid var(--warning-color);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
         .method-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -132,7 +124,7 @@
             display: flex;
             align-items: flex-start;
             margin-bottom: 15px;
-            padding: 10px ;
+            padding: 10px;
             background: var(--hover-bg);
             border-radius: 8px;
         }
@@ -254,11 +246,8 @@
             <p class="method-description">
                 Generate your string session quickly using Replit - No installation required!
             </p>
-            <div class="note">
-                You'll need a <code>API_ID</code> and <code>API_HASH</code> in order to generate pyrogram session. Always remember to use a good API combination, else your account could be deleted.
-            </div>
             <ol class="steps">
-                <li class="step">
+                <li class ="step">
                     <span class="step-number">1</span>
                     Click the button below to open Replit
                 </li>
@@ -281,9 +270,6 @@
             <p class="method-description">
                 Generate your string session using your local machine or VPS - Requires installation!
             </p>
-            <div class="note">
-                You'll need a <code>API_ID</code> and <code>API_HASH</code> in order to generate pyrogram session. Always remember to use a good API combination, else your account could be deleted.
-            </div>
             <ol class="steps">
                 <li class="step">
                     <span class="step-number">1</span>
@@ -295,14 +281,17 @@
                 </li>
                 <li class="step">
                     <span class="step-number">3</span>
-                    Run the following command with your <code>API_ID</code> and <code>API_HASH</code> to generate your string session:
-                    <div class="code-block">
-                        <code>
-                            python3 gen_session.py --api-id &lt;API_ID&gt; --api-hash &lt;API_HASH&gt;
-                        </code>
-                    </div>
+                    Run the `gen_session.py` script to generate your string session
                 </li>
             </ol>
+            <div class="code-block">
+                <code>
+                    git clone https://github.com/TheTeamVivek/YukkiMusic <br>
+                    cd YukkiMusic<br>
+                    pip3 install pyrogram TgCrypto <br>
+                    python3 genstring.py
+                </code>
+            </div>
         </div>
 
         <div class="warning-box">
@@ -315,8 +304,11 @@
         <div class="tips">
             <h3><i class="fas fa-info-circle"></i> Tips!</h3>
             <p>
-                If you're having trouble generating your string session, try checking the official YukkiMusic documentation for more information.
+                If you're having trouble generating your string session, try checking the official YukkiMusicdocumentation for more information.
             </p>
+        </div>
+        <div class="tips">
+                You'll need a <code>API_ID</code> and <code>API_HASH</code> in order to generate pyrogram session. Always remember to use a good API combination, else your account could be deleted.
         </div>
     </div>
 </body>
