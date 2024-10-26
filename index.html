@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YukkiMusic Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Light mode variables */
+        :root {
+            --primary-bg: #ffffff;
+            --text-color: #1a1a1a;
+            --text-secondary: #666666;
+            --link-color: #0969da;
+            --border-color: #e3e8ef;
+            --hover-bg: #f5f7f9;
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dark mode variables */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-bg: #0d1117;
+                --text-color: #ffffff;
+                --text-secondary: #8b949e;
+                --link-color: #58a6ff;
+                --border-color: #30363d;
+                --hover-bg: #161b22;
+                --card-bg: #161b22;
+                --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-top: 40px;
+        }
+
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .description {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+            background: var(--hover-bg);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            color: var(--link-color);
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            color: var(--link-color);
+            font-weight: 600;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 2em;
+            }
+
+            .description {
+                font-size: 1.1em;
+                padding: 0 20px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Link Styles */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover .card-title {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">YukkiMusic</h1>
+            <p class="description">
+                Welcome to YukkiMusic Documentation. Here you'll find everything you need to know about setting up and using YukkiMusic.
+            </p>
+        </header>
+
+        <div class="content-grid">
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-rocket card-icon"></i>
+                    <h2 class="card-title">Getting Started</h2>
+                </div>
+                <p class="card-description">
+                    Quick setup guide and basic configuration for YukkiMusic
+                </p>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-cogs card-icon"></i>
+                    <h2 class="card-title">Configuration</h2>
+                </div>
+                <p class="card-description">
+                    Detailed configuration options and customization guide
+                </p>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-terminal card-icon"></i>
+                    <h2 class="card-title">Commands</h2>
+                </div>
+                <p class="card-description">
+                    Complete list of available commands and their usage
+                </p>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-code-branch card-icon"></i>
+                    <h2 class="card-title">Deployment</h2>
+                </div>
+                <p class="card-description">
+                    Various deployment methods and hosting options
+                </p>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-question-circle card-icon"></i>
+                    <h2 class="card-title">FAQ</h2>
+                </div>
+                <p class="card-description">
+                    Frequently asked questions and troubleshooting guide
+                </p>
+            </a>
+
+            <a href="#" class="card">
+                <div class="card-header">
+                    <i class="fas fa-users card-icon"></i>
+                    <h2 class="card-title">Community</h2>
+                </div>
+                <p class="card-description">
+                    Join our community and get help from other users
+                </p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
