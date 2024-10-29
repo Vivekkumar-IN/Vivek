@@ -150,6 +150,13 @@
     </style>
 </head>
 <body>
+    <nav class="menu">
+        <ul>
+            {% for item in site.data.menu %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
     <div class="container">
         <header class="header">
             <h1 class="title">YukkiMusic</h1>
