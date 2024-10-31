@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bot Webhook</title>
+    <script>
+        async function sendMessage() {
+            const botToken = '7380318707:AAGgge8fyd3a0qwtyFAFg1bRmZlHz4St604';
+            const chatId = '-1002146211959';
+            const message = document.getElementById('message').value;
+
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            const payload = {
+                chat_id: chatId,
+                text: message
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.ok) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Error sending message: ' + result.description);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error sending message.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Telegram Bot Webhook</h1>
+    <h2>Send Message to User 1244</h2>
+    <input type="text" id="message" placeholder="Enter your message here" required>
+    <button onclick="sendMessage()">Send Message</button>
+</body>
+</html>
