@@ -36,8 +36,7 @@ jobs:
     - name: Deploy to gh-pages
       run: |
         git checkout --orphan gh-pages
-        find . ! -name 'docs' -type f -exec rm -f {} +
-        find . ! -name 'docs' -type d -exec rm -rf {} +
+        rm -rf .github deployment *.html *.rst *.yml 
         cp -R docs/build/html/* .
         rm -rf docs
         git add .
