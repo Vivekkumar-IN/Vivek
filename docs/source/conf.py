@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'YukkiMusic'
-copyright = '2024, VivekKumar'
-author = 'VivekKumar'
+copyright = '2024, VivekKumar-IN'
+author = 'VivekKumar-IN'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
